@@ -21,6 +21,7 @@
         </ul>
       </div>
     </nav>
+    <h1>Eddigi bejegyzések</h1>
     <table class="table">
       <thead>
         <th>Hangulat</th>
@@ -30,6 +31,24 @@
       <tbody id="content">
       </tbody>
     </table>
+    <h1>Új bejegyzés felvétele:</h1>
+    <form id="crudForm">
+      <label for="crudMood" class="form-label">Hangulat</label>
+      <select name="mood" id="crudMood" class="form-select">
+        <option value="😀">😀</option>
+        <option value="😐">😐</option>
+        <option value="😢">😢</option>
+        <option value="😴">😴</option>
+        <option value="😡">😡</option>
+      </select>
+      <br />
+      <label for="crudDesc" class="form-label">Leírás</label>
+      <input type="text" name="desc" id="crudDesc" class="form-control">
+      <label for="crudDate" class="form-label">Dátum és időpont</label>
+      <input type="datetime-local" name="date" id="crudDate" class="form-control">
+      <button type="submit" class="btn btn-info">Mentés</button>
+      <p id="message"></p>
+    </form>
         <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

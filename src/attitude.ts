@@ -6,7 +6,6 @@ export interface attitudes {
 }
 
 export interface Newattitudes {
-  id: number;
   date: string;
   desc: string;
   mood: string;
