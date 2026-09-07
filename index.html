@@ -6,6 +6,36 @@
     <title>Hangulatnapló</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Új bejegyzés</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="crud.html">Bejegyzések</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="stat.html">Statisztikák</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <form id="ujHangulatokForm">
+      <h1>Hangulatnapló</h1>
+      <label for="mood">Hogy érzed magad:</label> <br />
+      <select name="moods" id="mood">
+        <option value="😀">😀</option>
+        <option value="😐">😐</option>
+        <option value="😢">😢</option>
+        <option value="😴">😴</option>
+        <option value="😡">😡</option>
+      </select>
+      <br />
+      <label for="desc">Kérlek írd le, hogy miért:</label><br />
+      <input type="text" /><br />
+      <button type="submit" class="btn btn-info">Mentés</button>
+    </form>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
