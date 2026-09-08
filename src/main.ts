@@ -55,9 +55,11 @@ async function ujHangulat(e: SubmitEvent) {
   hangulatForm.reset();
 
   const message = document.getElementById("message");
-
+  const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   if (message) {
-    message.textContent = "A bejegyzés sikeresen mentve!";
+    message.style.display = "block";
+    await wait(2000);
+    message.style.display = "none";
   }
 }
 
@@ -97,6 +99,14 @@ async function ujCrudHangulat(e: SubmitEvent) {
 
   form.reset();
 
+  const message = document.getElementById("message");
+  const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  if (message) {
+    message.style.display = "block";
+    await wait(2000);
+    message.style.display = "none";
+  }
+
   loadHangulat();
 }
 
@@ -135,7 +145,7 @@ async function loadHangulat() {
 
     const editButton = document.createElement("button");
     editButton.textContent = "Módosítás";
-    editButton.classList.add("btn", "btn-warning");
+    editButton.classList.add("btn", "btn-outline-warning", "ms-2");
 
     editButton.addEventListener("click", async () => {
 
@@ -183,7 +193,7 @@ async function loadHangulat() {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Törlés";
-    deleteButton.classList.add("btn", "btn-danger", "ms-2");
+    deleteButton.classList.add("btn", "btn-outline-danger", "ms-2");
 
     deleteButton.addEventListener("click", async () => {
 

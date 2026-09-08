@@ -21,7 +21,8 @@
         </ul>
       </div>
     </nav>
-    <form id="ujHangulatokForm">
+    <div class="container mt-3" >
+      <form id="ujHangulatokForm">
       <h1>Hangulatnapló</h1>
       <label for="mood">Hogy érzed magad:</label> <br />
       <select name="mood" id="mood" class="form-select">
@@ -34,9 +35,12 @@
       <br />
       <label for="desc">Kérlek írd le, hogy miért:</label><br />
       <input type="text" name="desc" id="desc" class="form-control" /><br />
-      <button type="submit" class="btn btn-info">Mentés</button>
-      <p id="message"></p>
+      <button type="submit" class="btn btn-info mb-3">Mentés</button>
+      <div id="message" class="alert alert-success alert-dismissible fade show" style="display: none;">
+        <strong>Sikeres mentés!</strong> A bejegyzésed elmentésre került.
+      </div>
     </form>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

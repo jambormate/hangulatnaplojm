@@ -21,12 +21,14 @@
         </ul>
       </div>
     </nav>
-    <h1>Eddigi bejegyzések</h1>
-    <table class="table">
-      <thead>
-        <th>Hangulat</th>
-        <th>Leírás</th>
-        <th>Idő</th>
+    <div class="container mt-3">
+      <h1>Eddigi bejegyzések</h1>
+      <table class="table table-bordered">
+        <thead>
+          <th>Hangulat</th>
+          <th>Leírás</th>
+          <th>Dátum</th>
+        <th>Műveletek</th>  
       </thead>
       <tbody id="content">
       </tbody>
@@ -46,9 +48,12 @@
       <input type="text" name="desc" id="crudDesc" class="form-control">
       <label for="crudDate" class="form-label">Dátum és időpont</label>
       <input type="datetime-local" name="date" id="crudDate" class="form-control">
-      <button type="submit" class="btn btn-info">Mentés</button>
-      <p id="message"></p>
+      <button type="submit" class="btn btn-info mb-3 mt-3">Mentés</button>
+      <div id="message" class="alert alert-success alert-dismissible fade show" style="display: none;">
+        <strong>Sikeres mentés!</strong> A bejegyzésed elmentésre került.
+      </div>
     </form>
+    </div>
         <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
